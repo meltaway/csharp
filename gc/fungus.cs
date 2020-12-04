@@ -16,9 +16,9 @@ public abstract class Fungus : Eukaryote, IMovable, IComparable {
             throw new ArgumentException("Object is not area Fungus");
     }
     
-    public Fungus(int area, string type) {
+    public Fungus(int area, string t) {
         mycelliumArea = area;
-        type = type;
+        type = t;
         base.IncrementPopulation();
     }
 

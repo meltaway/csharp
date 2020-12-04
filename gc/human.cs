@@ -31,7 +31,7 @@ public class Human : Animal, IMovable, ISwimmable, IComparable, IDisposable, ISe
     private bool disposed = false;
     private void CleanDispose() {
         if (this.disposed == false)
-            jobs.Clear();
+            jobs = null;
         disposed = true;
     }
     private void CleanDestructor() => disposed = true;
@@ -58,9 +58,9 @@ public class Human : Animal, IMovable, ISwimmable, IComparable, IDisposable, ISe
         info.AddValue("Homo Sapiens", species);
     }
     
-    public Human(string name, string country, string job) : base(4) {
-        name = name;
-        country = country;
+    public Human(string n, string c, string job) : base(4) {
+        name = n;
+        country = c;
         jobs.Add(curjob = job);
         species = "Homo Sapiens";
         OldAge = 80;

@@ -56,7 +56,7 @@ public class Humanity : IEnumerable, IEnumerator, IDisposable, ISerializable {
     public void Sort() => Array.Sort(this.humanity);
     
     private void CleanDispose() {
-        if (this.disposed == false)
+        if (disposed == false)
             foreach (Human human in humanity)
                 human.Dispose();
         disposed = true;
